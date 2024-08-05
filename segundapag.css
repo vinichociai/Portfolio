@@ -1,0 +1,78 @@
+body,
+html {
+  font-family: Arial, sans-serif;
+  background-color: #283593;
+  color: #ffffff; /* Garante que o texto seja branco em todas as resoluções */
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Usa a altura total da tela */
+}
+
+.container {
+  width: 100%; /* Ocupa a largura total */
+  text-align: center;
+  padding: 20px; /* Evita que o conteúdo toque as bordas */
+  box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+.text-light {
+  white-space: nowrap; /* Impede que o texto quebre linhas */
+  overflow: hidden; /* Oculta texto que excede a largura do container */
+  text-overflow: ellipsis; /* Adiciona elipses se o texto exceder */
+}
+
+.btn {
+  width: 100%; /* Botões ocupam toda a largura disponível */
+  margin: 10px 0; /* Espaço vertical entre botões */
+}
+
+@media (max-width: 767px) {
+  .container,
+  .text-light,
+  .btn {
+    font-size: calc(100% - 1px); /* Reduz gradualmente o tamanho da fonte */
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 446px) {
+  body,
+  html {
+    font-family: Arial, sans-serif;
+    background-color: #283593;
+    color: #ffffff;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 10px;
+    overflow: hidden;
+  }
+
+  .container {
+    width: 100%;
+    text-align: center;
+    box-shadow: none;
+    overflow: hidden;
+  }
+
+  h1,
+  p {
+    font-size: 16px;
+    margin: 10px 0;
+    overflow: hidden;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 12px 20px;
+    width: 100%;
+    margin: 8px 0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+}
